@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  cursor: crosshair;
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+
+::selection {
+  background-color: transparent;
+  color: springgreen;
+}
+
+body {
+  position: relative;
+  font-family: Pretendard, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: help;
+}
+
+nav {
+  display: flex;
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+nav a {
+  flex: 1 1 0;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+}
+
+nav a:nth-child(odd) {
+  color: white;
+  background-color: black;
+}
+
+nav a:nth-child(even) {
+  color: white;
+  background-color: black;
+}
+
+nav a:hover::after {
+  content: attr(title);
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 1em;
+  font-size: 6vw;
+  font-weight: 900;
+  line-height: 1.125;
+  text-align: center;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 3rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 0;
+}
+
+h1 {
+  position: fixed;
+  font-size: 2vw;
+  font-weight: 800;
+  color: white;
+}
+
+h1:hover {
+  color: springgreen;
+}
+
+.right {
+  top: 1%;
+  right: 5.5%;
+}
+
+.left {
+  top: 1%;
+  left: 5.5%;
+}
